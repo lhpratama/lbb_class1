@@ -50,16 +50,14 @@ Dependent variable = `DEATH_EVENT`
 
 # 2. DATA PREPERATION
 
-The First step is inserting the csv file into R located in data_input and then installing the necessary plugins including `dplyr`, `dplyr`, `lubridate`, etc.
+The First step is inserting the csv file into R located in data_input and then installing the necessary plugins including `dplyr`, `lubridate`, `caret`, etc.
 
 ```{r}
 #Read data csv
 heart <- read.csv("heart_failure_clinical_records_dataset.csv")
 
-library(knitr)               # Used for displaying graphics
 library(dplyr)               # Used for data manipulation
 library(lubridate)           # Used for date and time manipulation (used by 'glimpse' function)
-library(ROSE)                # Used for oversampling (up-sampling) the data
 library(caret)               # Used for data splitting and machine learning (used for 'prop.table' and 'upSample')
 library(ggplot2)             # Used for data visualization
 library(MASS)                # Used for logistic regression (logistic model fitting)
